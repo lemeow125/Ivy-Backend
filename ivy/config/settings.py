@@ -134,6 +134,9 @@ REST_FRAMEWORK = {
     )
 }
 
+DOMAIN = 'localhost:3000'
+SITE_NAME = 'localhost:3000'
+
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
     'SEND_CONFIRMATION_EMAIL': True,
