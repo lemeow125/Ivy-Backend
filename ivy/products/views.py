@@ -14,4 +14,4 @@ class LogViewSet(viewsets.ModelViewSet):
     # permission_classes = [IsAuthenticated]
     http_method_names = ['get']
     serializer_class = LogSerializer
-    queryset = Product.history.all().order_by('history_date')
+    queryset = Product.history.all().order_by('-history_date')

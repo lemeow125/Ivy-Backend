@@ -7,7 +7,7 @@ class HistoricalRecordField(serializers.ListField):
     child = serializers.DictField()
 
     def to_representation(self, data):
-        return super().to_representation(data.values('quantity', 'history_date').order_by('history_date'))
+        return super().to_representation(data.values('quantity', 'history_date').order_by('-history_date'))
 
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
