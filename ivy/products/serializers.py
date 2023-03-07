@@ -26,13 +26,14 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 class LogSerializer(serializers.HyperlinkedModelSerializer):
     history_date = serializers.DateTimeField(
         format="%d-%m-%Y %I:%M%p", read_only=True)
+    history_user = serializers.ReadOnlyField(source='history_user.username')
 
     class Meta:
         model = Product.history.model
         fields = ('history_id', 'id', 'name', 'quantity',
-                  'history_date', 'history_user_id')
+                  'history_date', 'history_user')
         read_only_fields = ('history_id', 'id', 'name', 'quantity',
-                            'history_date', 'history_user_id')
+                            'history_date', 'history_user')
 
 
 class UserSerializer(serializers.ModelSerializer):

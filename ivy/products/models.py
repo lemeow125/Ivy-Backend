@@ -8,6 +8,8 @@ class Product(models.Model):
     name = models.CharField(max_length=20)
     quantity = models.IntegerField(default=0)
     date_added = models.DateTimeField(default=now, editable=False)
+    changed_by = models.ForeignKey(
+        'auth.user', null=True, on_delete=models.SET_NULL)
     history = HistoricalRecords()
 
     def __str__(self):
