@@ -29,7 +29,13 @@ class LogSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Product.history.model
-        fields = ('history_id', 'name', 'quantity',
+        fields = ('history_id', 'id', 'name', 'quantity',
                   'history_date', 'history_user_id')
-        read_only_fields = ('history_id', 'name', 'quantity',
+        read_only_fields = ('history_id', 'id', 'name', 'quantity',
                             'history_date', 'history_user_id')
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'email', 'date_joined')
