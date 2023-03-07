@@ -13,6 +13,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 class UserListViewSet(viewsets.ModelViewSet):
     # permission_classes = [IsAuthenticated]
+    http_method_names = ['get']
     serializer_class = UserSerializer
     queryset = User.objects.all()
 
