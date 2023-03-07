@@ -1,4 +1,5 @@
 from rest_framework import serializers, mixins
+from django.contrib.auth.models import User
 from simple_history.models import HistoricalRecords
 from .models import Product
 
@@ -28,5 +29,7 @@ class LogSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Product.history.model
-        fields = ('history_id', 'name', 'quantity', 'history_date')
-        read_only_fields = ('history_id', 'name', 'quantity', 'history_date')
+        fields = ('history_id', 'name', 'quantity',
+                  'history_date', 'history_user_id')
+        read_only_fields = ('history_id', 'name', 'quantity',
+                            'history_date', 'history_user_id')
