@@ -9,4 +9,4 @@ class Product(models.Model):
     date_added = models.DateTimeField(default=now, editable=False)
 
     def __str__(self):
-        return self.title
+        return self.name

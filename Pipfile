@@ -9,6 +9,7 @@ djangorestframework = "*"
 djoser = "*"
 djangorestframework-simplejwt = "*"
 django-cors-headers = "*"
+django-simple-history = "*"
 
 [dev-packages]
 autopep8 = "*"
