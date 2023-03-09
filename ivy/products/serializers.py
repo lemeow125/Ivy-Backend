@@ -12,7 +12,7 @@ class HistoricalRecordField(serializers.ListField):
 
 class ProductSerializer(serializers.HyperlinkedModelSerializer):
     date_added = serializers.DateTimeField(
-        format="%d-%m-%Y %I:%M%p", read_only=True)
+        format="%m-%d-%Y %I:%M%p", read_only=True)
     quantity = serializers.IntegerField(required=False, default=0)
     history = HistoricalRecordField(read_only=True)
 
@@ -24,7 +24,7 @@ class ProductSerializer(serializers.HyperlinkedModelSerializer):
 
 class LogSerializer(serializers.HyperlinkedModelSerializer):
     history_date = serializers.DateTimeField(
-        format="%d-%m-%Y %I:%M%p", read_only=True)
+        format="%m-%d-%Y %I:%M%p", read_only=True)
     history_user = serializers.ReadOnlyField(source='history_user.username')
 
     class Meta:
