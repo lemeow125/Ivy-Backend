@@ -136,8 +136,8 @@ REST_FRAMEWORK = {
     )
 }
 
-DOMAIN = 'localhost:3000'
-SITE_NAME = 'localhost:3000'
+DOMAIN = 'localhost:3000/Ivy'
+SITE_NAME = 'localhost:3000/Ivy'
 
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
@@ -157,4 +157,5 @@ EMAIL_PORT = '2525'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://lemeow125.github.io",
 ]
