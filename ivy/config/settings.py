@@ -136,8 +136,8 @@ REST_FRAMEWORK = {
     )
 }
 
-DOMAIN = 'localhost:3000/Ivy'
-SITE_NAME = 'localhost:3000/Ivy'
+DOMAIN = 'lemeow125.github.io/Ivy/#'
+SITE_NAME = 'lemeow125.github.io/Ivy/#'
 
 DJOSER = {
     'SEND_ACTIVATION_EMAIL': True,
