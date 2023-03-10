@@ -11,6 +11,7 @@ djangorestframework-simplejwt = "*"
 django-cors-headers = "*"
 django-simple-history = "*"
 python-dotenv = "*"
+whitenoise = "*"
 
 [dev-packages]
 autopep8 = "*"
